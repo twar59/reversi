@@ -3,5 +3,6 @@ require 'bundler'
 
 Bundler.require
 
-require './reversi'
+require './config/boot'
+
 run Reversi
