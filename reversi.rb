@@ -1,6 +1,6 @@
 class Reversi < Sinatra::Application
   get '/' do
-    board = Board.new
-    board.to_s
+    @board = Board.new
+    erb :index
   end
 end
