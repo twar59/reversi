@@ -1,7 +1,6 @@
-require 'sinatra/base'
-
 class Reversi < Sinatra::Application
   get '/' do
-    'Hello world!'
+    board = Board.new
+    board.to_s
   end
 end
