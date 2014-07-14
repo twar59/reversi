@@ -10,7 +10,7 @@ class Reversi < Sinatra::Application
   end
 
   get '/game' do
-    #
+    erb :game
     # write some html to render a board
     #
   end
