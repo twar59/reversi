@@ -10,5 +10,8 @@ class Reversi < Sinatra::Application
   end
 
   get '/game' do
+    #
+    # write some html to render a board
+    #
   end
 end
