@@ -1,12 +1,12 @@
-<table width="24px" cellpadding="24px" border="7px" bgcolor="#009900">
-  <tr><th>&nbsp;</th>
+<table width="27px" cellpadding="27px" border="7px" bgcolor="#CCFF33">
+  <tr><th id="pos-0-0">&nbsp</th>
   <% ("A".."H").each do |col| %>
     <th id="pos-<%= col %>-0"><%= col %></th>
   <% end %></tr>
   <% (1..8).each do |row| %>
-    <tr><th id="pos-<%= row %>"><%= row %></th>
+    <tr><th id="pos-0-<%= row %>"><%= row %></th>
       <% (1..8).each do |col| %>
-        <td id="pos-<%= col %>-1">&nbsp;</td>
+        <td id="pos-<%= row %>-<%= col %>">&nbsp;</td>
       <% end %>
   <% end %></tr>
 </table>
