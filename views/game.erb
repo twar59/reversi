@@ -14,14 +14,9 @@
   </tr>
   <tr>
     <th scope="row">1</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <% (1..8).each do |col| %>
+      <td id="pos-<%= col %>-1">&nbsp;</td>
+    <% end %>
   </tr>
   <tr>
     <th scope="row">2</th>
