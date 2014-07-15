@@ -1,15 +1,16 @@
 class Reversi < Sinatra::Application
   get '/' do
-    @name_of_game = "reversi"
-
+    @page_title = "Reversi"
     erb :index
   end
 
   get '/about' do
+    @page_title = "Reversi About"
     erb :about
   end
 
   get '/game' do
+    @page_title = "Reversi Game"
     erb :game
     # write some html to render a board
     #
