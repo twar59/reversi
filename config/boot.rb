@@ -3,6 +3,7 @@ require 'sinatra'
 require "sinatra/activerecord"
 
 # -- configure sinatra settings
+set :static, true
 set :root, File.expand_path(File.dirname(__FILE__) + '/../')
 set :database, "sqlite3:reversi.db"
 
