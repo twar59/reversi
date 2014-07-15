@@ -1,98 +1,12 @@
-  <table width="24px" cellpadding="24px"
-   table border="7px" bgcolor="#cccc00">
-
-  <tr>
-    <th></th>
-    <th scope="col">A</th>
-    <th scope="col">B</th>
-    <th scope="col">C</th>
-    <th scope="col">D</th>
-    <th scope="col">E</th>
-    <th scope="col">F</th>
-    <th scope="col">G</th>
-    <th scope="col">H</th>
-  </tr>
-  <tr>
-    <th scope="row">1</th>
-    <% (1..8).each do |col| %>
-      <td id="pos-<%= col %>-1">&nbsp;</td>
-    <% end %>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">4</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">5</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">6</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">7</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th scope="row">8</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  </table>
+<table width="24px" cellpadding="24px" border="7px" bgcolor="#cccc00">
+  <tr><th>&nbsp;</th>
+  <% ("A".."H").each do |col| %>
+    <th id="pos-<%= col %>-0"><%= col %></th>
+  <% end %></tr>
+  <% (1..8).each do |row| %>
+    <tr><th id="pos-<%= row %>"><%= row %></th>
+      <% (1..8).each do |col| %>
+        <td id="pos-<%= col %>-1">&nbsp;</td>
+      <% end %>
+  <% end %></tr>
+</table>
