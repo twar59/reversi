@@ -27,7 +27,7 @@
         font-size   : 1.5em;
         color       : #757E65;
         text-align  : center;}
-      navcontainer ul  {
+      #navcontainer ul  {
         padding-left: 0;
         margin-left: 0;
         background-color: #036;
@@ -35,9 +35,9 @@
         float: left;
         width: 100%;
         font-family: arial, helvetica, sans-serif;}
-      navcontainer ul li { display: inline; }
+      #navcontainer ul li { display: inline; }
 
-      navcontainer ul li a  {
+      #navcontainer ul li a  {
         padding: 0.2em 1em;
         background-color: #036;
         color: White;
@@ -45,27 +45,31 @@
         float: left;
         border-right: 1px solid #fff;}
 
-      navcontainer ul li a:hover {
+      #navcontainer ul li a:hover {
         background-color: #369;
         color: #fff;}
 
       .wrapper {
         width       : 1200px;
-        margin      : 200px auto 20px auto;
+        margin      : 10px auto 20px auto;
         border      : 5px solid #cccccc;
         background-color : #ffffff;}
     </style>
   </head>
   <body>
     <div id="navcontainer">
-      <ul id="navlist">
-        <li id="active"><a href="/about" id="current">About</a></li>
+      <ul>
+        <li id="active"><a href="/about">About</a></li>
         <li><a href="/game">Game</a></li>
         <li><a href="/">Reversi</a></li>
       </ul>
     </div>
+
+    <!-- find out why this is needed -->
+    <div style="clear: both"></div>
+
+    <div class="wrapper">
+      <%= yield %>
+    </div>
   </body>
-  <div class="wrapper">
-    <%= yield %>
-  </div>
 </html>
