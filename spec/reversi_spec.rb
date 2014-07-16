@@ -9,6 +9,6 @@ end
 describe "my example app" do
   it "should successfully return a reversi board" do
     get '/'
-    last_response.body.must_include 'reversi board!'
+    last_response.body.must_include 'Welcome to Reversi'
   end
 end
