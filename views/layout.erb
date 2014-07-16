@@ -27,6 +27,28 @@
         font-size   : 1.5em;
         color       : #757E65;
         text-align  : center;}
+      navcontainer ul  {
+        padding-left: 0;
+        margin-left: 0;
+        background-color: #036;
+        color: White;
+        float: left;
+        width: 100%;
+        font-family: arial, helvetica, sans-serif;}
+      navcontainer ul li { display: inline; }
+
+      navcontainer ul li a  {
+        padding: 0.2em 1em;
+        background-color: #036;
+        color: White;
+        text-decoration: none;
+        float: left;
+        border-right: 1px solid #fff;}
+
+      navcontainer ul li a:hover {
+        background-color: #369;
+        color: #fff;}
+
       .wrapper {
         width       : 1200px;
         margin      : 200px auto 20px auto;
@@ -34,21 +56,16 @@
         background-color : #ffffff;}
     </style>
   </head>
-<body>
-
-    <ul id="main-nav">
-      <li>
-        <a href="/about">About</a>
-      </li>
-
-      <li>
-        <a href="/game">Game</a>
-      </li>
-    </ul>
-
+  <body>
+    <div id="navcontainer">
+      <ul id="navlist">
+        <li id="active"><a href="/about" id="current">About</a></li>
+        <li><a href="/game">Game</a></li>
+        <li><a href="/">Reversi</a></li>
+      </ul>
+    </div>
+  </body>
   <div class="wrapper">
     <%= yield %>
   </div>
-</body>
 </html>
-
