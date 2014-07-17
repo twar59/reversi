@@ -12,7 +12,19 @@ class Reversi < Sinatra::Application
   get '/game' do
     @page_title = "Reversi Game"
     erb :game
-    # write some html to render a board
-    #
+  end
+  
+  get '/game/new' do
+    game = Game.new(board: Board.new.to_s)
+    game.save
+    redirect to("/game/#{game.id}")
+  end
+
+  get '/game/:id' do
+    @page_title = "Reversi Game: #{params[:id]}"
+
+    @game = Game.find(params[:id])
+    @board = Board.new(@game.board)
+    erb "game/show".to_sym
   end
 end

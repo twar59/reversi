@@ -1,0 +1,31 @@
+<style>
+
+#game-board td {
+    border: 1px solid #000;
+  }
+</style>
+
+
+
+<!--
+<table width="18em" height="18em" cellpadding="7em" border="9px" bgcolor="#CCFF33" align= "center">
+-->
+<table id="game-board">
+  <tr>
+    <th id="pos-0-0">&nbsp;</th>
+    <% ("A".."H").each do |col| %>
+      <th id="pos-<%= col %>-0"><%= col %></th>
+    <% end %>
+  </tr>
+
+  <% (0..7).each do |row| %>
+    <tr>
+      <th id="pos-0-<%= row %>"><%= row %></th>
+      <% (0..7).each do |col| %>
+        <td id="pos-<%= row %>-<%= col %>">
+          <%= draw_piece @board.pos(row, col) %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
