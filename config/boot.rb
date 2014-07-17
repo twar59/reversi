@@ -10,6 +10,7 @@ set :database, "sqlite3:reversi.db"
 # -- require files
 require  settings.root + '/reversi'
 require  settings.root + '/tasks'
+require  settings.root + '/view_helpers'
 
 # -- models
 Dir[settings.root + "/models/*.rb"].each {|file| require file }
